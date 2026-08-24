@@ -1,0 +1,28 @@
+{
+  "bootstrapped": true,
+  "as_of_date": "2026-08-21",
+  "source_cta_txt_date": "2026-08-17",
+  "last_lecture_date_applied": "2026-08-21",
+  "positions": [
+    {
+      "symbol": "EFA",
+      "entry_date": "2026-08-18",
+      "initial_stop": 107.70,
+      "current_stop": 108.50,
+      "last_stop_update_date": "2026-08-21",
+      "class": "Per-Horizon",
+      "horizon_days": 10,
+      "notes": ""
+    },
+    {
+      "symbol": "SLV",
+      "entry_date": "2026-08-10",
+      "initial_stop": 55.40,
+      "current_stop": 57.82,
+      "last_stop_update_date": "2026-08-17",
+      "class": "High Conviction",
+      "horizon_days": null,
+      "notes": ""
+    }
+  ]
+}

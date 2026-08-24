@@ -1,0 +1,59 @@
+{
+  "generated_at": "17 Aug 2026, 10:48pm AEST",
+  "report_date": "8/17/2026",
+  "book_as_of": "2026-08-14 (published in the 8/17 lecture)",
+  "summary": [
+    "Nothing forced today. Steve is watching the VIX grind lower as a setup for a long-vol or short-index trade, and flags persistent seller resistance in TLT as a possible multi-month hedge idea rather than an immediate entry.",
+    "A backtest note from today's lecture: layering entries over roughly ten days only helped traders using leverage; for a straight buy it made no measurable difference."
+  ],
+  "book_positions": [
+    {"symbol": "GDX", "entry_date": "2026-07-31", "return_pct": 20.15, "stop": 88.54},
+    {"symbol": "URA", "entry_date": "2026-08-05", "return_pct": 3.96, "stop": 44.48},
+    {"symbol": "SLV", "entry_date": "2026-08-10", "return_pct": 1.18, "stop": 57.82},
+    {"symbol": "DBC", "entry_date": "2026-08-12", "return_pct": 0.13, "stop": 29.44},
+    {"symbol": "EEM", "entry_date": "2026-08-13", "return_pct": 0.29, "stop": 66.13},
+    {"symbol": "XLK", "entry_date": "2026-08-14", "return_pct": -0.59, "stop": 188.11}
+  ],
+  "comparison": [
+    {"symbol": "DBC", "in_book": true, "held": true, "qty": 40, "avg_price": 29.77, "market_price": 30.00,
+     "book_stop": 29.44, "live_stop": null, "live_stop_status": "missing",
+     "note": "Prior GTC stop at $29.44 shows REPLACED; no successor order found."},
+    {"symbol": "SLV", "in_book": true, "held": true, "qty": 20, "avg_price": 57.85, "market_price": 59.21,
+     "book_stop": 57.82, "live_stop": 57.47, "live_stop_status": "stale",
+     "note": "Live stop is last week's level, hasn't been raised."},
+    {"symbol": "URA", "in_book": true, "held": true, "qty": 20, "avg_price": 42.81, "market_price": 45.28,
+     "book_stop": 44.48, "live_stop": 44.27, "live_stop_status": "stale",
+     "note": "Live stop is last week's level, hasn't been raised."},
+    {"symbol": "XLK", "in_book": true, "held": true, "qty": 10, "avg_price": 191.22, "market_price": 191.25,
+     "book_stop": 188.11, "live_stop": null, "live_stop_status": "missing",
+     "note": "Prior GTC stop at $184.77 shows REPLACED; no successor order found."},
+    {"symbol": "SMH", "in_book": false, "held": true, "qty": 5, "avg_price": 587.97, "market_price": 594.25,
+     "book_stop": null, "live_stop": null, "live_stop_status": "n/a",
+     "note": "8/14 buy signal appears cancelled in Steve's report; no longer part of the current book."},
+    {"symbol": "GDX", "in_book": true, "held": false, "qty": null, "avg_price": null, "market_price": null,
+     "book_stop": 88.54, "live_stop": null, "live_stop_status": "n/a",
+     "note": "In Steve's book since 7/31 (+20.15%), not currently held."},
+    {"symbol": "EEM", "in_book": true, "held": false, "qty": null, "avg_price": null, "market_price": null,
+     "book_stop": 66.13, "live_stop": null, "live_stop_status": "n/a",
+     "note": "In Steve's book since 8/13 (+0.29%), not currently held."}
+  ],
+  "new_signals": [
+    {"symbol": "QQQ", "type": "High conviction", "stop": 716.14, "queued": true},
+    {"symbol": "XOP", "type": "High conviction", "stop": 171.13, "queued": true},
+    {"symbol": "EWY", "type": "High conviction", "stop": 168.02, "queued": true},
+    {"symbol": "USO", "type": "High conviction", "stop": 118.39, "queued": false},
+    {"symbol": "CORN", "type": "CTA Slow", "stop": 18.05, "queued": false}
+  ],
+  "action_items": [
+    "SLV: live stop is $57.47; the report's current level is $57.82.",
+    "URA: live stop is $44.27; the report's current level is $44.48.",
+    "DBC: no live protective stop found; the report's current level is $29.44.",
+    "XLK: no live protective stop found; the report's current level is $188.11.",
+    "SMH: held but no longer in Steve's book and has no live stop — worth a decision either way.",
+    "GDX and EEM are in Steve's book but not currently held.",
+    "USO and CORN are today's new signals without a queued entry order yet, unlike QQQ, XOP and EWY."
+  ],
+  "anomalies": [
+    "The 8/17 report's \"Trade cancelled\" line is labeled against XLK but carries the exact stop price from SMH's 8/14 buy signal ($560.38) — treated here as a labeling mix-up in Steve's report text rather than a fact about XLK."
+  ]
+}
