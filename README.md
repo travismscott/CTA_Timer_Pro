@@ -14,3 +14,7 @@ against live IBKR positions/orders, and republishes the same "CTA Timer Pro Anal
 no browser required.
 
 See `SKILL.md` for the full workflow and the exact `data/inbox/` file contract.
+
+Naming convention for files:
+     `report_yyyy_mm_dd` for pdf report.
+     `lecture_yyyy_mm_dd` for text from webpage.
