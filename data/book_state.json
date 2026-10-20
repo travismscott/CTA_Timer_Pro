@@ -1,7 +1,6 @@
 {
   "bootstrapped": true,
   "as_of_date": "2026-08-26",
-  "source_cta_txt_date": null,
   "last_lecture_date_applied": "2026-08-27",
   "notes": "Refreshed straight from report_2026_08_27.pdf's Section 3 Open Positions table (dated 08/26/2026 internally, attached to the 8/27 lecture), per SKILL.md's 'report format changed on 8/24/2026' rule -- replaced the prior 9-row book wholesale rather than incrementally rolling. This brought in 5 positions (EWY, IEF, INDA, ZROZ, DBB) that were only 'new signals' (not yet in book_state.positions) as of the last run -- they are now confirmed filled per this report, taking the book from 9 to 14 positions. Cross-checked Section 1 STOP UPDATES against the 8/27 lecture's 'Raise stops to' lines: all match exactly (GDX $100.38, CORN $19.54, EEM $66.50, URA $45.99, EWW $76.21, ILF both lots $34.39, EWY $173.48). EEM and EWW both carry a discretionary 'tighten stop to entry' time-stop flag (EEM $66.18, EWW $76.00) repeated again today -- not applied to current_stop since it is discretionary guidance, not yet a mechanical trail update; recorded in each position's notes instead. Anomaly: EWY's signal class is inconsistent between sources -- the 8/26 lecture called it 'High Conviction' but today's PDF (Section 2, same trade, same $169.01 initial stop) labels it 'CTA Slow'; kept as High Conviction here per the original call, flagged in this run's anomalies.",
   "positions": [
