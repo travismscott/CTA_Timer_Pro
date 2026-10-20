@@ -1,0 +1,47 @@
+symbol,class,entry_date,entry_price(limit),initial_stop,status,exit_date,exit_or_mark_price,return_pct,pnl_usd,sessions_held,gap_through_stop,entry_estimated
+TLT,Macro,2026-09-18,81.47,80.74,closed,2026-09-23,80.98,-0.6,-4.9,3,False,False
+DBB,CTA Slow,2026-09-22,26.06,25.84,closed,2026-09-23,25.84,-0.84,-2.2,1,False,False
+EZU,CTA Fast,2026-09-22,69.27,68.69,closed,2026-09-23,68.69,-0.84,-5.8,1,False,False
+SLV,CTA Fast,2026-09-22,59.31,59.04,closed,2026-09-23,59.0,-0.52,-3.1,1,True,False
+ITB,CTA Fast,2026-09-23,89.95,89.6,closed,2026-09-23,89.6,-0.39,-3.5,0,False,False
+TLT,Macro,2026-09-24,80.35,80.22,closed,2026-09-24,80.22,-0.16,-1.3,0,False,False
+ITB,CTA Slow,2026-09-28,88.84,87.91,closed,2026-09-29,87.91,-1.05,-9.3,1,False,False
+SEF,Macro,2026-09-29,31.04,30.76,closed,2026-10-06,31.2,0.52,1.6,5,True,True
+TLT,Macro,2026-09-29,78.52,78.43,closed,2026-09-29,78.43,-0.11,-0.9,0,False,False
+TLT,Macro,2026-09-30,78.16,78.05,closed,2026-09-30,78.05,-0.14,-1.1,0,False,False
+IBB,CTA Fast,2026-10-01,210.09,207.4,closed,2026-10-01,207.4,-1.28,-26.9,0,False,False
+EWY,CTA Fast,2026-10-02,191.13,178.9,closed,2026-10-07,182.34,-4.6,-87.9,3,True,False
+TLT,Macro,2026-10-02,77.94,77.38,closed,2026-10-02,77.38,-0.72,-5.6,0,False,False
+EWZ,CTA Fast,2026-10-05,42.78,37.64,closed,2026-10-14,42.21,-1.33,-5.7,7,True,False
+IYT,CTA Fast,2026-10-05,80.31,79.39,closed,2026-10-07,79.34,-1.21,-9.7,2,True,False
+XRT,CTA Fast,2026-10-05,82.74,82.53,closed,2026-10-05,82.53,-0.25,-2.1,0,False,False
+EWJ,CTA Slow,2026-10-06,99.79,98.69,closed,2026-10-07,97.97,-1.82,-18.2,1,True,False
+QQQ,Macro,2026-10-06,760.54,751.31,closed,2026-10-08,751.31,-1.21,-92.3,2,False,False
+SPY,Macro,2026-10-06,778.15,771.45,closed,2026-10-08,771.45,-0.86,-67.0,2,False,False
+TLT,Macro,2026-10-06,77.17,77.01,closed,2026-10-07,76.46,-0.92,-7.1,1,True,False
+XLE,CTA Fast,2026-10-06,63.02,62.58,open,,68.25,8.3,52.31,8,,False
+XLU,CTA Fast,2026-10-08,41.15,40.52,closed,2026-10-14,41.34,0.46,1.9,4,False,False
+XOP,CTA Fast,2026-10-08,191.59,187.34,open,,200.4,4.6,88.13,6,,False
+DBA,CTA Fast,2026-10-09,28.41,28.18,closed,2026-10-09,28.18,-0.81,-2.3,0,False,False
+IYT,CTA Fast,2026-10-09,79.8,79.56,closed,2026-10-09,79.56,-0.3,-2.4,0,False,False
+TLT,Macro,2026-10-09,77.71,77.51,closed,2026-10-09,77.51,-0.26,-2.0,0,False,False
+XLF,CTA Slow,2026-10-09,54.25,54.01,closed,2026-10-14,54.2,-0.09,-0.5,3,True,False
+XLU,CTA Fast,2026-10-09,40.97,40.88,closed,2026-10-14,41.34,0.9,3.7,3,False,False
+XRT,CTA Slow,2026-10-09,83.91,83.67,closed,2026-10-09,83.67,-0.29,-2.4,0,False,False
+IYT,CTA Fast,2026-10-12,79.93,79.56,closed,2026-10-13,79.56,-0.46,-3.7,1,False,False
+TLT,Macro,2026-10-12,77.84,77.39,open,,80.02,2.8,21.8,4,,False
+XLU,CTA Fast,2026-10-12,41.46,40.52,closed,2026-10-14,41.34,-0.29,-1.2,2,False,False
+XRT,CTA Slow,2026-10-12,83.98,83.01,closed,2026-10-14,83.49,-0.58,-4.9,2,False,False
+TLT,Macro,2026-10-14,77.83,77.59,open,,80.09,2.9,22.57,2,,False
+USO,CTA Fast,2026-10-14,154.09,149.79,open,,161.79,5.0,77.05,2,,False
+XLE,Macro,2026-10-14,67.6,65.11,open,,68.21,0.9,6.08,2,,False
+XLU,Macro,2026-10-14,41.8,41.34,closed,2026-10-14,41.34,-1.1,-4.6,0,False,False
+XOP,Macro,2026-10-14,200.48,192.58,open,,200.48,-0.0,-0.0,2,,False
+PHO,CTA Slow,2026-10-15,69.77,68.47,open,,70.05,0.4,2.79,1,,False
+TLT,Macro,2026-10-15,80.47,78.1,open,,80.07,-0.5,-4.02,1,,False
+WOOD,CTA Slow,2026-10-15,66.54,66.27,closed,2026-10-16,66.27,-0.41,-2.7,1,False,True
+XLU,Macro,2026-10-15,42.19,40.56,open,,42.23,0.1,0.42,1,,False
+EWW,CTA Slow,2026-10-16,74.25,73.53,open,,74.92,0.9,6.68,0,,False
+INDA,CTA Slow,2026-10-16,47.95,47.7,closed,2026-10-16,47.7,-0.52,-2.5,0,False,False
+IYT,CTA Slow,2026-10-16,81.03,79.71,closed,2026-10-16,79.71,-1.63,-13.2,0,False,False
+TLT,Macro,2026-10-16,79.67,79.17,open,,80.07,0.5,3.98,0,,False
