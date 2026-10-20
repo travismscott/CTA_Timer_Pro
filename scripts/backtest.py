@@ -199,7 +199,8 @@ def simulate(reports, start):
         if want != got:
             miss = [x for x in want if x not in got]
             extra = [x for x in got if x not in want]
-            notes.append(f"{d}: ledger vs table mismatch. Ledger-only: {miss or '-'}  Table-only: {extra or '-'}")
+            fmt = lambda xs: ", ".join(f"{sym} {dt.isoformat()}" for dt, sym in xs) or "none"
+            notes.append(f"{d}: ledger vs table mismatch. In ledger only: {fmt(miss)}. In report table only: {fmt(extra)}.")
         for r in rep["open"]:
             cand = [l for l in lots if l["sym"] == r["sym"] and l["entry"] == r["date"] and l["status"] == "open"]
             if cand:
@@ -312,6 +313,28 @@ def main():
         w.writeheader()
         for d in daily:
             w.writerow({k: (round(v, 2) if isinstance(v, float) else v) for k, v in d.items()})
+
+    import json
+    seen_lot = defaultdict(int)
+    for r in rows:
+        k = f"{r['symbol']}_{r['entry_date'].isoformat()}"
+        seen_lot[k] += 1
+        r["lot"] = k if seen_lot[k] == 1 else f"{k}_{seen_lot[k]}"
+    jt = [{"lot": r["lot"], "symbol": r["symbol"], "class": r["class"], "entry_date": r["entry_date"].isoformat(),
+           "entry_price": r["entry_price(limit)"], "initial_stop": r["initial_stop"], "status": r["status"],
+           "exit_date": r["exit_date"].isoformat() if r["exit_date"] else None,
+           "exit_or_mark_price": r["exit_or_mark_price"], "return_pct": r["return_pct"], "pnl_usd": r["pnl_usd"],
+           "sessions_held": r["sessions_held"], "gap_through_stop": bool(r["gap_through_stop"]),
+           "entry_estimated": r["entry_estimated"]} for r in rows]
+    je = [{"date": d["date"].isoformat(), "realized": round(d["realized"], 2), "unrealized": round(d["unrealized"], 2),
+           "equity": round(d["equity"], 2), "open_lots": d["open_lots"]} for d in daily]
+    memo_notes = [{"kind": "before start", "note": f"{l['sym']} bought {l['entry'].isoformat()}, before the start date, "
+                   f"stopped out {l['exit_date'].isoformat()} at {l['exit']}; not in the totals."}
+                  for l in memo if l["status"] == "closed"]
+    jn = memo_notes + [{"kind": "data", "note": n} for n in notes]
+    for name, obj in (("trades.json", jt), ("equity.json", je), ("notes.json", jn)):
+        with open(os.path.join(a.out, name), "w") as f:
+            json.dump(obj, f, indent=1)
 
     wins = [l for l in closed if pnl(l) > 0.004]
     losses = [l for l in closed if pnl(l) < -0.004]

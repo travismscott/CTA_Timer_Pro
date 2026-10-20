@@ -74,7 +74,7 @@
 - 2026-09-21: TLT 2026-09-18 stop 80.74 -> table 80.98 (synced).
 - 2026-09-28: TLT trade cancelled (open was at/above the stop) - no lot.
 - 2026-09-29: SEF (entered 2026-09-29) is in the open table but was never listed as a new trade - lot rebuilt, entry price estimated from its stop-out return.
-- 2026-09-29: ledger vs table mismatch. Ledger-only: -  Table-only: [(datetime.date(2026, 9, 29), 'SEF')]
+- 2026-09-29: ledger vs table mismatch. In ledger only: none. In report table only: SEF 2026-09-29.
 - 2026-10-01: TLT trade cancelled (open was at/above the stop) - no lot.
 - 2026-10-05: XOP trade cancelled (open was at/above the stop) - no lot.
 - 2026-10-07: IWR trade cancelled (open was at/above the stop) - no lot.

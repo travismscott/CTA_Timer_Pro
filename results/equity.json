@@ -1,0 +1,149 @@
+[
+ {
+  "date": "2026-09-18",
+  "realized": 0,
+  "unrealized": -2.44,
+  "equity": -2.44,
+  "open_lots": 2
+ },
+ {
+  "date": "2026-09-21",
+  "realized": 0,
+  "unrealized": 3.26,
+  "equity": 3.26,
+  "open_lots": 2
+ },
+ {
+  "date": "2026-09-22",
+  "realized": 0,
+  "unrealized": 16.34,
+  "equity": 16.34,
+  "open_lots": 5
+ },
+ {
+  "date": "2026-09-23",
+  "realized": -19.5,
+  "unrealized": 0.0,
+  "equity": -19.5,
+  "open_lots": 0
+ },
+ {
+  "date": "2026-09-24",
+  "realized": -20.8,
+  "unrealized": 0.0,
+  "equity": -20.8,
+  "open_lots": 0
+ },
+ {
+  "date": "2026-09-25",
+  "realized": -20.8,
+  "unrealized": 0.0,
+  "equity": -20.8,
+  "open_lots": 0
+ },
+ {
+  "date": "2026-09-28",
+  "realized": -20.8,
+  "unrealized": -0.89,
+  "equity": -21.69,
+  "open_lots": 1
+ },
+ {
+  "date": "2026-09-29",
+  "realized": -31.0,
+  "unrealized": 0.0,
+  "equity": -31.0,
+  "open_lots": 1
+ },
+ {
+  "date": "2026-09-30",
+  "realized": -32.1,
+  "unrealized": 0.0,
+  "equity": -32.1,
+  "open_lots": 1
+ },
+ {
+  "date": "2026-10-01",
+  "realized": -59.0,
+  "unrealized": 0.0,
+  "equity": -59.0,
+  "open_lots": 1
+ },
+ {
+  "date": "2026-10-02",
+  "realized": -64.6,
+  "unrealized": 7.65,
+  "equity": -56.95,
+  "open_lots": 2
+ },
+ {
+  "date": "2026-10-05",
+  "realized": -66.7,
+  "unrealized": 1.14,
+  "equity": -65.56,
+  "open_lots": 4
+ },
+ {
+  "date": "2026-10-06",
+  "realized": -65.1,
+  "unrealized": -48.55,
+  "equity": -113.65,
+  "open_lots": 8
+ },
+ {
+  "date": "2026-10-07",
+  "realized": -188.0,
+  "unrealized": -39.33,
+  "equity": -227.33,
+  "open_lots": 4
+ },
+ {
+  "date": "2026-10-08",
+  "realized": -347.3,
+  "unrealized": 38.68,
+  "equity": -308.62,
+  "open_lots": 4
+ },
+ {
+  "date": "2026-10-09",
+  "realized": -356.4,
+  "unrealized": 40.36,
+  "equity": -316.04,
+  "open_lots": 6
+ },
+ {
+  "date": "2026-10-12",
+  "realized": -356.4,
+  "unrealized": 90.25,
+  "equity": -266.15,
+  "open_lots": 10
+ },
+ {
+  "date": "2026-10-13",
+  "realized": -360.1,
+  "unrealized": 159.76,
+  "equity": -200.34,
+  "open_lots": 9
+ },
+ {
+  "date": "2026-10-14",
+  "realized": -371.4,
+  "unrealized": 99.56,
+  "equity": -271.84,
+  "open_lots": 7
+ },
+ {
+  "date": "2026-10-15",
+  "realized": -371.4,
+  "unrealized": 70.63,
+  "equity": -300.77,
+  "open_lots": 10
+ },
+ {
+  "date": "2026-10-16",
+  "realized": -389.8,
+  "unrealized": 277.79,
+  "equity": -112.01,
+  "open_lots": 12
+ }
+]

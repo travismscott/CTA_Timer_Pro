@@ -1,0 +1,54 @@
+[
+ {
+  "kind": "before start",
+  "note": "SEF bought 2026-09-14, before the start date, stopped out 2026-09-23 at 30.59; not in the totals."
+ },
+ {
+  "kind": "data",
+  "note": "2026-09-18: SEF (entered 2026-09-14) is in the open table but was never listed as a new trade - bought before the start date, memo only."
+ },
+ {
+  "kind": "data",
+  "note": "2026-09-21: TLT 2026-09-18 stop 80.74 -> table 80.98 (synced)."
+ },
+ {
+  "kind": "data",
+  "note": "2026-09-28: TLT trade cancelled (open was at/above the stop) - no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-09-29: SEF (entered 2026-09-29) is in the open table but was never listed as a new trade - lot rebuilt, entry price estimated from its stop-out return."
+ },
+ {
+  "kind": "data",
+  "note": "2026-09-29: ledger vs table mismatch. In ledger only: none. In report table only: SEF 2026-09-29."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-01: TLT trade cancelled (open was at/above the stop) - no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-05: XOP trade cancelled (open was at/above the stop) - no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-07: IWR trade cancelled (open was at/above the stop) - no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-08: IWM trade cancelled (open was at/above the stop) - no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-15: WOOD 'trade cancelled' ignored per lecture; lot kept (entry price estimated)."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-16: WOOD stop-out matched on return only (tracked stop did not equal the report's protective stop 66.27)."
+ },
+ {
+  "kind": "data",
+  "note": "Lecture cross-check ran over 53 signals on 21 lecture days; days without a lecture file are not checked."
+ }
+]
