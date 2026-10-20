@@ -16,5 +16,5 @@ no browser required.
 See `SKILL.md` for the full workflow and the exact `data/inbox/` file contract.
 
 Naming convention for files:
-     `report_yyyy_mm_dd` for pdf report.
-     `lecture_yyyy_mm_dd` for text from webpage.
+     `CTA_Report_YYYYMMDD_HHMM` for the daily pdf report.
+     `lecture_YYYYMMDD` for text from webpage.
