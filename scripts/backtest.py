@@ -34,6 +34,9 @@ IGNORE_CANCEL = {
 # 9/22 lecture), so the date comes from the filename for that file.
 DATE_FROM_FILENAME = {"CTA_Report_20260921_2109": date(2026, 9, 21)}
 
+# lecture_20261018.rtf was uploaded under the wrong date; its own header reads 10/8/2026.
+LECTURE_DATE_OVERRIDE = {"lecture_20261018": date(2026, 10, 8)}
+
 SYM = r"[A-Z][A-Z.]{0,5}"
 NUM = r"[\d,]+\.?\d*"
 
@@ -229,7 +232,8 @@ def lecture_signals(inbox):
     out, dates = {}, set()
     for path in sorted(glob.glob(os.path.join(inbox, "lecture_*.rtf"))):
         m = re.search(r"lecture_(\d{4})(\d\d)(\d\d)", path)
-        d = date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+        d = LECTURE_DATE_OVERRIDE.get(os.path.basename(path)[:-4],
+                                      date(int(m.group(1)), int(m.group(2)), int(m.group(3))))
         dates.add(d)
         try:
             txt = subprocess.run(["pandoc", "-f", "rtf", "-t", "plain", "--wrap=none", path],
