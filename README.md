@@ -18,3 +18,5 @@ See `SKILL.md` for the full workflow and the exact `data/inbox/` file contract.
 Naming convention for files:
      `CTA_Report_YYYYMMDD_HHMM` for the daily pdf report.
      `lecture_YYYYMMDD` for text from webpage.
+
+Each run also refreshes the "CTA Timer Pro backtest" dashboard from `scripts/backtest.py` and `results/` (see Step 5b in `SKILL.md`).

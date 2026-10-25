@@ -1,29 +1,29 @@
-# CTA Timer Pro - follow-every-signal backtest (2026-09-18 to 2026-10-19)
+# CTA Timer Pro - follow-every-signal backtest (2026-09-18 to 2026-10-23)
 
-10 shares per signal, entry at the report's limit price, exits at the report's stop-out prices. 22 daily reports.
+10 shares per signal, entry at the report's limit price, exits at the report's stop-out prices. 26 daily reports.
 
 ## Bottom line
 
-- **Net P/L: $-192.56**  (realized $-393.80 on 35 closed lots, unrealized $+201.24 on 14 open lots)
-- Signals followed: 49 lots, $53,563 total bought; peak capital in the market $21,239
-- Return on peak capital: -0.91%
+- **Net P/L: $-184.23**  (realized $-335.40 on 51 closed lots, unrealized $+151.17 on 13 open lots)
+- Signals followed: 64 lots, $64,464 total bought; peak capital in the market $21,239
+- Return on peak capital: -0.87%
 
 ## Closed trades
 
-- Win rate: **3/35 = 8.6%**; loss rate 91.4%; flat 0
-- Average win $+2.40 (+0.63%), average loss $-12.53 (-0.81%)
-- Payoff ratio (avg win / avg loss): 0.19
-- Profit factor (gross wins / gross losses): 0.02  (wins $7.20, losses $-401.00)
-- Expectancy per closed trade: $-11.25
-- Average sessions held: wins 4.0, losses 1.1
-- Best: XLU 2026-10-09 $+3.70 (+0.9%); worst: QQQ 2026-10-06 $-92.30 (-1.2%)
+- Win rate: **10/51 = 19.6%**; loss rate 80.4%; flat 0
+- Average win $+17.96 (+2.04%), average loss $-12.56 (-0.91%)
+- Payoff ratio (avg win / avg loss): 1.43
+- Profit factor (gross wins / gross losses): 0.35  (wins $179.60, losses $-515.00)
+- Expectancy per closed trade: $-6.58
+- Average sessions held: wins 5.1, losses 1.2
+- Best: XOP 2026-10-08 $+40.80 (+2.1%); worst: QQQ 2026-10-06 $-92.30 (-1.2%)
 - Stops that gapped through (filled below the stop): 8 lots, cost $59.10 beyond the stop price
-- Stopped out the same day as entry: 15 lots
+- Stopped out the same day as entry: 20 lots
 
 ## Open at the last report
 
-- 14 open lots, 7 in profit, 7 at/below water; unrealized $+201.24
-- Win rate if open lots are counted at their current mark: 10/49 = 20.4%
+- 13 open lots, 11 in profit, 2 at/below water; unrealized $+151.17
+- Win rate if open lots are counted at their current mark: 21/64 = 32.8%
 
 - Equity curve (realized + open marks): peak $+16.34, max drawdown from a peak $332.38
 
@@ -31,34 +31,35 @@
 
 | Class | Closed | Wins | P/L incl. open |
 |---|---|---|---|
-| CTA Fast | 14 | 2 | $+45.55 |
-| CTA Slow | 10 | 0 | $-50.16 |
-| Macro | 11 | 1 | $-187.95 |
+| CTA Slow | 15 | 3 | $-19.40 |
+| CTA Fast | 17 | 5 | $-46.00 |
+| Macro | 19 | 2 | $-118.83 |
 
 ## By symbol (P/L incl. open)
 
 | Symbol | P/L |
 |---|---|
-| XOP | $+68.53 |
-| USO | $+67.80 |
-| XLE | $+48.56 |
-| EWW | $+11.14 |
+| TLT | $+109.52 |
+| PHO | $+36.24 |
+| USO | $+25.50 |
+| ITB | $+21.40 |
+| XLU | $+6.52 |
 | SEF | $+1.60 |
 | XLF | $-0.50 |
-| PHO | $-1.40 |
+| XLE | $-0.50 |
+| EWW | $-0.50 |
+| XLB | $-0.80 |
 | DBB | $-2.20 |
 | DBA | $-2.30 |
 | INDA | $-2.50 |
 | WOOD | $-2.70 |
 | SLV | $-3.10 |
-| IYR | $-4.00 |
 | EWZ | $-5.70 |
 | EZU | $-5.80 |
-| TLT | $-7.85 |
-| XLU | $-8.64 |
+| XOP | $-7.30 |
 | XRT | $-9.40 |
-| ITB | $-12.80 |
 | EWJ | $-18.20 |
+| IYR | $-20.40 |
 | IBB | $-26.90 |
 | IYT | $-29.00 |
 | SPY | $-67.00 |
@@ -82,4 +83,8 @@
 - 2026-10-08: IWM trade cancelled (open was at/above the stop) - no lot.
 - 2026-10-15: WOOD 'trade cancelled' ignored per lecture; lot kept (entry price estimated).
 - 2026-10-16: WOOD stop-out matched on return only (tracked stop did not equal the report's protective stop 66.27).
-- Lecture cross-check ran over 56 signals on 22 lecture days; days without a lecture file are not checked.
+- 2026-10-20: stopped out SH 2026-10-20 @ 32.15 (-0.6%) matched no lot.
+- 2026-10-22: IWR trade cancelled (open was at/above the stop) - no lot.
+- 2026-10-23: ITB stop-out matched on return only (tracked stop did not equal the report's protective stop 89.67).
+- LECTURE CHECK 2026-10-20: SH signal (stop 32.15) has no lot in the reports.
+- Lecture cross-check ran over 80 signals on 29 lecture days; days without a lecture file are not checked.
