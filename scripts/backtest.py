@@ -189,7 +189,9 @@ def simulate(reports, start):
             if not exact:
                 notes.append(f"{d}: {s['sym']} stop-out matched on return only (tracked stop did not equal the "
                              f"report's protective stop {s['stop']}).")
-            l = sorted(pick, key=lambda x: x["entry"])[0]
+            # Closest return first (two lots can share a stop and differ by a tenth of a percent), then oldest.
+            l = sorted(pick, key=lambda x: (0 if x["limit"] is None else
+                                            round(abs((s["exit"] / x["limit"] - 1) * 100 - s["ret"]), 3), x["entry"]))[0]
             l.update(status="closed", exit=s["exit"], exit_date=s["date"], gap=s["stop"] is not None and s["exit"] < s["stop"] - 0.005)
             if l["limit"] is None:
                 l["limit"] = round(s["exit"] / (1 + s["ret"] / 100), 2)
@@ -231,7 +233,9 @@ def lecture_signals(inbox):
     """{(date, symbol): (initial stop, class text)} from the lecture RTFs (needs pandoc; skipped if absent)."""
     out, dates = {}, set()
     for path in sorted(glob.glob(os.path.join(inbox, "lecture_*.rtf"))):
-        m = re.search(r"lecture_(\d{4})(\d\d)(\d\d)", path)
+        m = re.search(r"lecture_(\d{4})[-_]?(\d\d)[-_]?(\d\d)", path)
+        if not m:
+            continue
         d = LECTURE_DATE_OVERRIDE.get(os.path.basename(path)[:-4],
                                       date(int(m.group(1)), int(m.group(2)), int(m.group(3))))
         dates.add(d)

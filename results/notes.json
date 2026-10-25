@@ -49,6 +49,22 @@
  },
  {
   "kind": "data",
-  "note": "Lecture cross-check ran over 56 signals on 22 lecture days; days without a lecture file are not checked."
+  "note": "2026-10-20: stopped out SH 2026-10-20 @ 32.15 (-0.6%) matched no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-22: IWR trade cancelled (open was at/above the stop) - no lot."
+ },
+ {
+  "kind": "data",
+  "note": "2026-10-23: ITB stop-out matched on return only (tracked stop did not equal the report's protective stop 89.67)."
+ },
+ {
+  "kind": "data",
+  "note": "LECTURE CHECK 2026-10-20: SH signal (stop 32.15) has no lot in the reports."
+ },
+ {
+  "kind": "data",
+  "note": "Lecture cross-check ran over 80 signals on 29 lecture days; days without a lecture file are not checked."
  }
 ]

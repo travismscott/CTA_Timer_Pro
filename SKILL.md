@@ -115,9 +115,22 @@ Rank on the service's own grading, described rather than recommended:
 4. If the built-in `Artifact` tool is available, call it with `action: "list"` to find the existing **CTA Timer Pro Analysis** artifact, then publish with that artifact's `url` so it updates in place. Publish a stripped copy — `<title>`, `<style>`, and body content only, no doctype/`<html>`/`<head>`/`<body>` tags (the `Artifact` tool wraps those itself). Keep the favicon stable across runs.
 5. `signals_resolved` / `price_label` behave exactly as in the original: default (pre-open) pricing labels the outcome column as start risk (`Would cancel` / `Thin margin` / `Clear of stop`); if the drop you're working from is from after that session's open, set `"signals_resolved": true` and use the actual opening price.
 
+## Step 5b: Refresh the CTA Timer Pro backtest dashboard
+
+Every run that processes a new `CTA_Report_*.pdf` also refreshes the **CTA Timer Pro backtest** artifact (`https://claude.ai/artifact/81pds2pAeftPHDvxZMXjGr`), the follow-every-signal backtest of Steve's recommendations. Skip this step only if the run processed no new PDF.
+
+1. Make sure `pdftotext` and `pandoc` are installed (`apt-get install -y poppler-utils pandoc`). Without pandoc the lecture cross-check is silently skipped.
+2. Run the backtest over **both** folders, since processed PDFs live in `data/processed/` and this run's new ones are still in `data/inbox/`. The simplest way is to do Step 6's `git mv` first, then run:
+   `python3 scripts/backtest.py --inbox data/processed --out results`
+   This rewrites `results/summary.md`, `trades.json`, `equity.json`, `notes.json`, `trades.csv` and `daily_equity.csv`.
+3. Sanity-check before publishing: the "open lots" count in `results/summary.md` should equal the number of rows in the newest PDF's Section 3 Open Positions table. If it doesn't, read `notes.json` for `ledger vs table mismatch` and `matched no lot` entries and fix the matcher or add a documented override in `scripts/backtest.py` (see `IGNORE_CANCEL`), rather than publishing a wrong ledger. A `matched no lot` note for a symbol Steve never signalled in the reports (e.g. SH on 10/20) is an existing known quirk.
+4. Upload the three JSON files to the dashboard with the `Artifact` tool (`url` = the backtest URL, `asset: true`, one `file_path` per call: `results/trades.json`, `results/equity.json`, `results/notes.json`). Each result gives a new `/_blob/<id>` url.
+5. Point the dashboard's datasets at the new files with `ArtifactData` (`action: "update"`, `collection: "datasets"`, `doc_id` = `trades` / `equity` / `notes`, `if_version` = the version you just read). Set `source` to `{"format":"json","kind":"file","name":"<file>.json","url":"<new /_blob url>"}` and `updated` to `{"at":"<now ISO>","by":"Claude"}`. The page itself needs no change, since every figure is computed from these datasets.
+6. In the final summary, give the headline numbers (net P/L, closed win rate, profit factor, open lots) and the date range the backtest now covers.
+
 ## Step 6: Persist state and clean up
 
-1. Write the updated `data/book_state.json`.
+1. Write the updated `data/book_state.json` (and, from Step 5b, the refreshed `results/` files).
 2. `git mv` every inbox file you processed this run from `data/inbox/` into `data/processed/` (keep the same filename) — this is what marks a file as consumed; anything left in `data/inbox/` on the next run is new.
 3. `git add -A`, commit (e.g. `"Update CTA book state through YYYY-MM-DD"`), and `git push origin <branch>`. This is what makes the persisted book state available to the *next* run, cloud or otherwise — don't skip it even if the artifact publish already succeeded.
 
