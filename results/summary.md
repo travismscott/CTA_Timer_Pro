@@ -1,12 +1,12 @@
-# CTA Timer Pro - follow-every-signal backtest (2026-09-18 to 2026-10-23)
+# CTA Timer Pro - follow-every-signal backtest (2026-09-18 to 2026-10-26)
 
-10 shares per signal, entry at the report's limit price, exits at the report's stop-out prices. 26 daily reports.
+10 shares per signal, entry at the report's limit price, exits at the report's stop-out prices. 27 daily reports.
 
 ## Bottom line
 
-- **Net P/L: $-184.23**  (realized $-335.40 on 51 closed lots, unrealized $+151.17 on 13 open lots)
-- Signals followed: 64 lots, $64,464 total bought; peak capital in the market $21,239
-- Return on peak capital: -0.87%
+- **Net P/L: $-162.28**  (realized $-335.40 on 51 closed lots, unrealized $+173.12 on 14 open lots)
+- Signals followed: 65 lots, $65,372 total bought; peak capital in the market $21,239
+- Return on peak capital: -0.76%
 
 ## Closed trades
 
@@ -22,8 +22,8 @@
 
 ## Open at the last report
 
-- 13 open lots, 11 in profit, 2 at/below water; unrealized $+151.17
-- Win rate if open lots are counted at their current mark: 21/64 = 32.8%
+- 14 open lots, 11 in profit, 3 at/below water; unrealized $+173.12
+- Win rate if open lots are counted at their current mark: 21/65 = 32.3%
 
 - Equity curve (realized + open marks): peak $+16.34, max drawdown from a peak $332.38
 
@@ -31,19 +31,19 @@
 
 | Class | Closed | Wins | P/L incl. open |
 |---|---|---|---|
-| CTA Slow | 15 | 3 | $-19.40 |
+| CTA Slow | 15 | 3 | $-29.39 |
 | CTA Fast | 17 | 5 | $-46.00 |
-| Macro | 19 | 2 | $-118.83 |
+| Macro | 19 | 2 | $-86.88 |
 
 ## By symbol (P/L incl. open)
 
 | Symbol | P/L |
 |---|---|
-| TLT | $+109.52 |
-| PHO | $+36.24 |
+| TLT | $+139.05 |
+| PHO | $+39.07 |
 | USO | $+25.50 |
-| ITB | $+21.40 |
-| XLU | $+6.52 |
+| ITB | $+11.41 |
+| XLU | $+6.10 |
 | SEF | $+1.60 |
 | XLF | $-0.50 |
 | XLE | $-0.50 |
@@ -87,4 +87,4 @@
 - 2026-10-22: IWR trade cancelled (open was at/above the stop) - no lot.
 - 2026-10-23: ITB stop-out matched on return only (tracked stop did not equal the report's protective stop 89.67).
 - LECTURE CHECK 2026-10-20: SH signal (stop 32.15) has no lot in the reports.
-- Lecture cross-check ran over 80 signals on 29 lecture days; days without a lecture file are not checked.
+- Lecture cross-check ran over 80 signals on 30 lecture days; days without a lecture file are not checked.

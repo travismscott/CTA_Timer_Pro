@@ -180,5 +180,12 @@
   "unrealized": 151.17,
   "equity": -184.23,
   "open_lots": 13
+ },
+ {
+  "date": "2026-10-26",
+  "realized": -335.4,
+  "unrealized": 173.12,
+  "equity": -162.28,
+  "open_lots": 14
  }
 ]
